@@ -36,20 +36,32 @@ public class Main {
 //
 //        System.out.println(studentArrayList.contains(s1) ? "yes" : "no");
 
-        HashSet<Integer> integerHashSet = new HashSet<>();
-        integerHashSet.add(10);
-        integerHashSet.add(70);
-        integerHashSet.add(1016);
-        integerHashSet.add(10);
+            // HashSet, TreeSet
+//        HashSet<Integer> integerHashSet = new HashSet<>();
+//        integerHashSet.add(10);
+//        integerHashSet.add(70);
+//        integerHashSet.add(1016);
+//        integerHashSet.add(10);
+//
+//        System.out.println(integerHashSet);
+//
+//        Set<Student> studentSet = new TreeSet<>();
+//        studentSet.add(new Student("Non"));
+//        studentSet.add(new Student("Tae"));
+//        studentSet.add(new Student("Big"));
+//        for (Student s : studentSet) {
+//            System.out.println(s);
+//        }
 
-        System.out.println(integerHashSet);
+        Map<String, Student> studentMap = new TreeMap<>();
+        studentMap.put("5901", new Student("Tae"));
+        studentMap.put("5934", new Student("Pound"));
+        studentMap.put("5922", new Student("Bew"));
 
-        Set<Student> studentSet = new TreeSet<>();
-        studentSet.add(new Student("Non"));
-        studentSet.add(new Student("Tae"));
-        studentSet.add(new Student("Big"));
-        for (Student s : studentSet) {
-            System.out.println(s);
+        for (String id : studentMap.keySet()) {
+            Student s = studentMap.get(id);
+            s.addScore(100);
+            System.out.println(id + " " + s);
         }
     }
 }
