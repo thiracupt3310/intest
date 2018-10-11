@@ -1,0 +1,75 @@
+Collection  ????? interface ???????????? <<interface>>
+
+1. ??????????? add(E)
+	void addAll(Collection)
+-------------------------------------
+2. ???????? remove(E)
+	void removeAll(Collection)
+-------------------------------------
+3. ??????????                  contains(Object)
+ boolean     containsAll(Collection)
+-------------------------------------
+4. ???????		isEmpty()
+ boolean	
+----------------------------------------
+5. ?????????		clear()
+  void
+---------------------------------------
+6. ????????		size()
+  int
+------------------------------------------
+7. ?????? Array	toArray()
+  E[]
+---------------------------------------
+8. method ???????????? Object
+	equals(Object)
+	toString()
+------------------------------------------
+9. iterator() ????? Iterable
+   ??? for-each loop ???
+  for (E e : collection){...}
+------------------------------------------
+		| <<interface>> |
+		| Collection<E> |
+		|_______________|
+		^       ^       ^
+		|       |       |
+	________|       |       |___________________        
+       |                |                           |
+ <<interface>>     <<interface>>             <<interface>>
+    Set<E>            List<E>                   Queue<E>
+ ??????????????????????? 	                    ??????
+^         ^         ^    ^    ^____________       ^      ^
+|         |         |    |__________      |       |      |
+|         |  class ArrayList<E>     |     |_______|      |____________
+|         |________         class Vector<E>     |                     |
+class             |                         class linkedList<E>       |
+HashSet<E>	<<inerface>>                                        class priority Queue<E>
+?????????????                          SortedSet<E>                                          ?????????????????
+                    ^
+                    |
+                    |
+                <<interface>>
+                NavigableSet<E>
+                     ^
+                     |
+                     |
+                   class
+                  TreeSet<E>
+                                                 ???????????????? 
+E ????????????? ---------------> prinitive -------> Interger
+	|	     |------------> Float 
+	|---------> String
+	|---------> implement 
+                    comparable
+---------------------------------------------------------------------------------------------------------
+					| <<interface>> |
+					|    Map<K, V>  |  Key = Value
+					|_______________|   |      |
+                                                                                                                 ^                     ^            ???????? set  Collection 
+   					  |        |
+					  |       _|
+				__________|      | 
+			       |                 |
+			      class            class
+			   HashMap<K,V>     TreeMap<K,V>
